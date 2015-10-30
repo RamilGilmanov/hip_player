@@ -8,13 +8,11 @@ class HipPlayer < Sinatra::Base
   end
 
   post "/speak" do
-    puts "check speak"
     speaker = Speaker.new(params[:text])
     speaker.call
   end
 
   post "/notify" do
-    puts "check notify"
     notifier = Notifier.new(params[:type])
     notifier.call
   end
