@@ -5,11 +5,12 @@ include ESpeak
 
 class HipPlayer < Sinatra::Base
   get "/" do
-    "This is a Hip Player, YO!"
+    "This is a HipPlayer Client, YO!"
   end
 
-  get "/speak" do
-    speech = Speech.new("ololo")
+  post "/speak" do
+    puts "test"
+    speech = Speech.new(params[:text])
     speech.speak
   end
 end
