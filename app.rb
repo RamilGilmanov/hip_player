@@ -9,8 +9,8 @@ class HipPlayer < Sinatra::Base
 
   post "/speak" do
     puts "check speak"
-    speaker = Speech.new(params[:text])
-    speaker.speak
+    speaker = Speaker.new(params[:text])
+    speaker.call
   end
 
   post "/notify" do
