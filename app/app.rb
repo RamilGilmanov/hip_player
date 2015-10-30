@@ -1,4 +1,7 @@
 require "sinatra"
+require "espeak"
+
+include ESpeak
 
 class HipPlayer < Sinatra::Base
   get "/" do
@@ -6,6 +9,7 @@ class HipPlayer < Sinatra::Base
   end
 
   get "/speak" do
-    "I am speaking"
+    speech = Speech.new("ololo")
+    speech.speak
   end
 end
