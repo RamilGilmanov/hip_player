@@ -4,6 +4,6 @@ class Notifier
   end
 
   def call
-    # play
+    puts @notification_type
   end
 end

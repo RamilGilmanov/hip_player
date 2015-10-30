@@ -1,3 +1,5 @@
+require_relative "app/services/notifier"
+require_relative "app/services/speaker"
 require "sinatra"
 
 class HipPlayer < Sinatra::Base
@@ -12,8 +14,8 @@ class HipPlayer < Sinatra::Base
   end
 
   post "/notify" do
-    puts "check speak"
-    notifier = Notify.new(params[:type])
+    puts "check notify"
+    notifier = Notifier.new(params[:type])
     notifier.call
   end
 end
