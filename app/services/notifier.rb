@@ -4,6 +4,12 @@ class Notifier
   end
 
   def call
-    puts @notification_type
+    system("afplay #{file_name}")
+  end
+
+  private
+
+  def file_name
+    File.expand_path("./app/data/#{@notification_type}.mp3")
   end
 end
