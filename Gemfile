@@ -1,7 +1,8 @@
 source 'https://rubygems.org'
 
-gem "sinatra"
 gem "espeak-ruby"
+gem "sinatra"
+gem "whatlanguage"
 
 group :test do
   gem "pry-byebug"

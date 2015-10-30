@@ -23,6 +23,7 @@ GEM
       tilt (>= 1.3, < 3)
     slop (3.6.0)
     tilt (2.0.1)
+    whatlanguage (1.0.5)
 
 PLATFORMS
   ruby
@@ -31,6 +32,7 @@ DEPENDENCIES
   espeak-ruby
   pry-byebug
   sinatra
+  whatlanguage
 
 BUNDLED WITH
    1.10.5
