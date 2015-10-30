@@ -10,6 +10,6 @@ class Notifier
   private
 
   def file_name
-    File.expand_path("./app/data/#{@notification_type}.mp3")
+    File.expand_path("./app/data/#{@notification_type}_#{rand(5)}.mp3")
   end
 end
